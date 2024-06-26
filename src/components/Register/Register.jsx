@@ -1,8 +1,7 @@
 // src/RegisterForm.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
-
+import toast from 'react-hot-toast';
 const Register = () => {
     const [firstName, setfirstName] = useState("");
     const [lastName, setlastName] = useState("");
@@ -41,7 +40,7 @@ const Register = () => {
                         <input
                             className="w-full px-3 py-2 border rounded text-gray-700 focus:outline-none focus:ring focus:border-blue-500"
                             type="text" value={firstName} onChange={e => setfirstName(e.target.value)} name='firstName' id='firstName'
-                            required
+                            
                         />
                     </div>
 
@@ -50,7 +49,7 @@ const Register = () => {
                         <input
                             className="w-full px-3 py-2 border rounded text-gray-700 focus:outline-none focus:ring focus:border-blue-500"
                             type="text" value={lastName} onChange={e => setlastName(e.target.value)} name='lastName'
-                            required
+                            
                         />
                     </div>
                     <div className="form-group mb-4">
@@ -58,7 +57,7 @@ const Register = () => {
                         <input
                             className="w-full px-3 py-2 border rounded text-gray-700 focus:outline-none focus:ring focus:border-blue-500"
                             type="email" value={emailAddress} onChange={e => setemailAddress(e.target.value)} name='emailAddress'
-                            required
+                            
                         />
                     </div>
                     <div className="form-group mb-4">
@@ -66,7 +65,7 @@ const Register = () => {
                         <input
                             className="w-full px-3 py-2 border rounded text-gray-700 focus:outline-none focus:ring focus:border-blue-500"
                             type="password" value={password} onChange={e => setPassword(e.target.value)} name='password'
-                            required
+                            
                         />
                     </div>
                     <div className="form-group mb-6">
@@ -77,7 +76,7 @@ const Register = () => {
 
                             name="confirmPassword"
 
-                            required
+                            
                         />
                     </div>
                     <button
@@ -87,7 +86,7 @@ const Register = () => {
                         Register
                     </button>
                 </form>
-                <ToastContainer />
+                
             </div>
         </div>
     );
